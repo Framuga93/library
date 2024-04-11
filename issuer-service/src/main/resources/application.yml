@@ -1,0 +1,21 @@
+server:
+  port: 8280
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: issuer-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:mysql://localhost:3306/library
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+application:
+  max-allowed-book: 3
